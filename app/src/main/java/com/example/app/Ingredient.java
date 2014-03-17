@@ -4,6 +4,7 @@ public class Ingredient {
     private long id;
     private String ingredient;
     private String type;
+    private String[] category;
 
     public long getId() {
         return id;
@@ -20,9 +21,10 @@ public class Ingredient {
     public void setName(String comment) {
         this.ingredient = comment;
     }
-    // public void setIngredient(String comment) {
-    //     this.ingredient = comment;
-    // }
+
+    public void setCategory(String[] arr){
+        this.category = arr;
+    }
 
     // Will be used by the ArrayAdapter in the ListView
     @Override
