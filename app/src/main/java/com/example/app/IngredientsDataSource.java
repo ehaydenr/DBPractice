@@ -19,10 +19,12 @@ public class IngredientsDataSource {
     private SQLiteDatabase database;
     private MySQLiteHelper dbHelper;
     private String[] allColumns = { MySQLiteHelper.COLUMN_ID,
-            MySQLiteHelper.COLUMN_NAME };
+            MySQLiteHelper.COLUMN_NAME, MySQLiteHelper.COLUMN_CATEGORY };
+    public boolean justMade;
 
     public IngredientsDataSource(Context context, String sql) {
         dbHelper = new MySQLiteHelper(context, sql);
+        dbHelper.setSource(this);
     }
 
     public void open() throws SQLException {
@@ -34,9 +36,10 @@ public class IngredientsDataSource {
         dbHelper.close();
     }
 
-    public Ingredient createIngredient(String name){
+    public Ingredient createIngredient(String name, String category){
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.COLUMN_NAME, name);
+        values.put(MySQLiteHelper.COLUMN_CATEGORY, category);
         long insertId = database.insert(MySQLiteHelper.TABLE_INGREDIENTS, null, values);
         Cursor cursor = database.query(MySQLiteHelper.TABLE_INGREDIENTS, allColumns, MySQLiteHelper.COLUMN_ID + " = " + insertId, null, null, null, null);
         cursor.moveToFirst();
@@ -65,6 +68,11 @@ public class IngredientsDataSource {
         Ingredient ingredient = new Ingredient();
         ingredient.setId(cursor.getLong(0));
         ingredient.setName(cursor.getString(1));
+        ingredient.setCategory(cursor.getString(2));
         return ingredient;
+    }
+
+    public void justCreated(){
+        justMade = true;
     }
 }
