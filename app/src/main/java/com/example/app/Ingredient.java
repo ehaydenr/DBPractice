@@ -26,6 +26,10 @@ public class Ingredient {
         this.category = arr;
     }
 
+    public String[] getCategory(){
+        return this.category;
+    }
+
     // Will be used by the ArrayAdapter in the ListView
     @Override
     public String toString() {
