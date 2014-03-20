@@ -8,9 +8,13 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class TestDatabaseActivity extends ListActivity {
     private DataSource datasource;
@@ -31,6 +35,18 @@ public class TestDatabaseActivity extends ListActivity {
                 android.R.layout.simple_list_item_1, values);
         setListAdapter(adapter);
         adapter.notifyDataSetChanged();
+
+        ListView view = this.getListView();
+        view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView parentView, View childView,
+                                       int position, long id) {
+                Log.d(null, "Item selected: " + position);
+                Intent myIntent = new Intent(TestDatabaseActivity.this, RecipeActivity.class);
+                myIntent.putExtra("recipe", datasource.getRecipe(position)); //Optional parameters
+                startActivity(myIntent);
+            }
+        });
+
     }
 
     private String readFromFile() {

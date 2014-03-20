@@ -35,6 +35,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             COLUMN_ID + " integer primary key autoincrement, " +
             COLUMN_NAME + " text not null, " +
             COLUMN_CATEGORY + " text not null" + ");";
+
     private static String CREATE_RECIPES = "CREATE TABLE " + TABLE_RECIPES + "(" +
             COLUMN_ID + " integer primary key autoincrement, " +
             COLUMN_NAME + " text not null, " +

@@ -30,6 +30,7 @@ public class DataSource {
             MySQLiteHelper.COLUMN_INSTRUCTIONS_TEXT,
             MySQLiteHelper.COLUMN_CALORIES,
             MySQLiteHelper.COLUMN_RATING};
+
     public boolean justMade;
 
     public DataSource(Context context, String sql) {
@@ -61,6 +62,18 @@ public class DataSource {
         Ingredient newIngredient = cursorToIngredient(cursor);
         cursor.close();
         return newIngredient;
+    }
+
+    public Ingredient getIngredient(long id){
+        String[] whereArgs = { ""+id };
+        String queryString =
+                "SELECT * FROM " + MySQLiteHelper.TABLE_INGREDIENTS + " WHERE " + MySQLiteHelper.COLUMN_ID + " = ?";
+        Cursor cursor = database.rawQuery(queryString, whereArgs);
+        cursor.moveToFirst();
+        if(!cursor.isAfterLast()){
+            return cursorToIngredient(cursor);
+        }
+        return null;
     }
 
     public List<Ingredient> getAllIngredients(){
@@ -108,6 +121,18 @@ public class DataSource {
         Recipe newRecipe = cursorToRecipe(cursor);
         cursor.close();
         return newRecipe;
+    }
+
+    public Recipe getRecipe(long id){
+        String[] whereArgs = { ""+id };
+        String queryString =
+                "SELECT * FROM " + MySQLiteHelper.TABLE_RECIPES + " WHERE " + MySQLiteHelper.COLUMN_ID + " = ?";
+        Cursor cursor = database.rawQuery(queryString, whereArgs);
+        cursor.moveToFirst();
+        if(!cursor.isAfterLast()){
+            return cursorToRecipe(cursor);
+        }
+        return null;
     }
 
     public List<Recipe> getAllRecipes(){

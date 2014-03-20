@@ -1,5 +1,7 @@
 package com.example.app;
 
+import java.io.Serializable;
+
 /**
  *   `id` int(11) NOT NULL AUTO_INCREMENT,
  `Name` varchar(30) NOT NULL,
@@ -13,7 +15,7 @@ package com.example.app;
  `Rating` int(11) NOT NULL,
  * Created by ehaydenr on 3/17/14.
  */
-public class Recipe {
+public class Recipe implements Serializable{
     private long id, TimeActual, Calories, Rating;
     private String Name, MealType, Ingredients, IngredientsWithNumVal, TimeDisplay, InstructionsText;
 
