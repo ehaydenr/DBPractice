@@ -15,7 +15,7 @@ package com.example.app;
  */
 public class Recipe {
     private long id, TimeActual, Calories, Rating;
-    private String Name, Ingredients, IngredientsWithNumVal, TimeDisplay, InstructionsText;
+    private String Name, MealType, Ingredients, IngredientsWithNumVal, TimeDisplay, InstructionsText;
 
     public long getId() {
         return id;
@@ -55,6 +55,14 @@ public class Recipe {
 
     public void setName(String name) {
         Name = name;
+    }
+
+    public String getMealType() {
+        return MealType;
+    }
+
+    public void setMealType(String mealType) {
+        MealType = mealType;
     }
 
     public String getIngredients() {
