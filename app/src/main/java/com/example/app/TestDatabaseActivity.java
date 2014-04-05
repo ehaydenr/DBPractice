@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 
 import android.app.ListActivity;
@@ -16,6 +18,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 public class TestDatabaseActivity extends ListActivity {
     private DataSource datasource;
 
@@ -24,10 +29,13 @@ public class TestDatabaseActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_test_database);
 
+        // Extract JSON from file and import into array
+        Gson g = new Gson();
+        Type type = new TypeToken<ArrayList<ArrayList<String>>>(){}.getType();
+        ArrayList<ArrayList<String>> ingredientsList = g.fromJson(readFromFile(R.raw.ingredients), type);
+        ArrayList<ArrayList<String>> recipeList = g.fromJson(readFromFile(R.raw.recipes), type);
 
-        String sql = this.readFromFile();
-        Log.i(null, "Found: " + sql);
-        datasource = new DataSource(this, sql);
+        datasource = new DataSource(this, ingredientsList, recipeList);
         datasource.open();
 
         List<Ingredient> values = datasource.getAllIngredients();
@@ -49,12 +57,12 @@ public class TestDatabaseActivity extends ListActivity {
 
     }
 
-    private String readFromFile() {
+    private String readFromFile(int resource) {
 
         String ret = "";
 
         try {
-            InputStream inputStream = this.getResources().openRawResource(R.raw.recipe);
+            InputStream inputStream = this.getResources().openRawResource(resource);
 
             if ( inputStream != null ) {
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);

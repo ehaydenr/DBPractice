@@ -51,15 +51,12 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
     private DataSource dataSource;
 
-    public MySQLiteHelper(Context context, String sql) {
+    public MySQLiteHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-        //this.DATABASE_CREATE = sql;
-        //Log.d(null, "constant update");
     }
 
     @Override
     public void onCreate(SQLiteDatabase database) {
-        Log.d(null, "Going to create database");
         database.execSQL(CREATE_INGREDIENTS);
         database.execSQL(CREATE_RECIPES);
 
@@ -78,9 +75,6 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 Log.d(null, "Table name: " + s);
             }
         }
-
-
-
 
         dataSource.justCreated();
         Log.d(null, "Create executed");
