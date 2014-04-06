@@ -98,4 +98,8 @@ public class Recipe implements Serializable{
     public void setInstructionsText(String instructionsText) {
         InstructionsText = instructionsText;
     }
+
+    public String toString(){
+        return this.getName();
+    }
 }

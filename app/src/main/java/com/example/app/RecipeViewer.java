@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class RecipeActivity extends ActionBarActivity {
+public class RecipeViewer extends ActionBarActivity {
 
     TextView id, name, mealType, ingredients, ingredientsTextWithNumVal, timeDisplay, timeActual, instructionsText, caloriesText, ratingText;
 
@@ -20,7 +20,7 @@ public class RecipeActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(null, "Recipe Activity Called");
-        setContentView(R.layout.fragment_recipe_activity);
+        setContentView(R.layout.recipe_viewer);
         initTextFields((Recipe)getIntent().getSerializableExtra("recipe"));
 
     }
