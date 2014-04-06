@@ -138,11 +138,10 @@ public class DataSource {
         return null;
     }
 
-    public ArrayList<Recipe> getAllRecipes(){
+    public ArrayList<Recipe> searchRecipes(String keyword){
         ArrayList<Recipe> recipes = new ArrayList<Recipe>();
-
-        Cursor cursor = database.query(MySQLiteHelper.TABLE_RECIPES, allRecipeColumns, null, null, null, null, null);
-
+        String queryString = "SELECT * FROM " + MySQLiteHelper.TABLE_RECIPES + (keyword.length() == 0 ? "" : " WHERE " + MySQLiteHelper.COLUMN_NAME + " LIKE '%" + keyword + "%'");
+        Cursor cursor = database.rawQuery(queryString, null);
         cursor.moveToFirst();
         while(!cursor.isAfterLast()){
             Recipe recipe = cursorToRecipe(cursor);
@@ -152,6 +151,23 @@ public class DataSource {
 
         cursor.close();
         return recipes;
+    }
+
+    public ArrayList<Recipe> getAllRecipes(){
+//        ArrayList<Recipe> recipes = new ArrayList<Recipe>();
+//
+//        Cursor cursor = database.query(MySQLiteHelper.TABLE_RECIPES, allRecipeColumns, null, null, null, null, null);
+//
+//        cursor.moveToFirst();
+//        while(!cursor.isAfterLast()){
+//            Recipe recipe = cursorToRecipe(cursor);
+//            recipes.add(recipe);
+//            cursor.moveToNext();
+//        }
+//
+//        cursor.close();
+//        return recipes;
+        return this.searchRecipes("");
     }
 
     private Recipe cursorToRecipe(Cursor cursor){
