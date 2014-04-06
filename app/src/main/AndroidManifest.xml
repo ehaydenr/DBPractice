@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.app.TestDatabaseActivity"
+            android:name="com.example.app.StartupActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,9 +17,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.app.RecipeActivity"
+            android:name=".RecipeViewer"
             android:label="@string/title_activity_recipe" >
         </activity>
+        <activity
+            android:name=".RecipeListing"
+            android:label="@string/title_activity_recipe__listing" >
+        </activity>
+        <activity
+            android:name=".IngredientListing"
+            android:label="Ingredient_Listing">
+        </activity>
+
     </application>
 
 </manifest>

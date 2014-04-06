@@ -1,5 +1,15 @@
 package com.example.app;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -9,25 +19,18 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.ListActivity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+/**
+ * Created by ehaydenr on 4/6/14.
+ */
+public class StartupActivity extends Activity {
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-public class TestDatabaseActivity extends ListActivity {
     private DataSource datasource;
+    private Button viewAllIngredients, viewAllRecipes;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_test_database);
+        setContentView(R.layout.startup);
 
         // Extract JSON from file and import into array
         Gson g = new Gson();
@@ -38,19 +41,23 @@ public class TestDatabaseActivity extends ListActivity {
         datasource = new DataSource(this, ingredientsList, recipeList);
         datasource.open();
 
-        List<Ingredient> values = datasource.getAllIngredients();
-        ArrayAdapter<Ingredient> adapter = new ArrayAdapter<Ingredient>(this,
-                android.R.layout.simple_list_item_1, values);
-        setListAdapter(adapter);
-        adapter.notifyDataSetChanged();
+        viewAllIngredients = (Button) findViewById(R.id.viewAllIngredientsButton);
+        viewAllRecipes = (Button) findViewById(R.id.viewAllRecipesButton);
 
-        ListView view = this.getListView();
-        view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView parentView, View childView,
-                                       int position, long id) {
-                Log.d(null, "Item selected: " + position);
-                Intent myIntent = new Intent(TestDatabaseActivity.this, RecipeActivity.class);
-                myIntent.putExtra("recipe", datasource.getRecipe(position)); //Optional parameters
+        viewAllIngredients.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(StartupActivity.this, IngredientListing.class);
+                myIntent.putExtra("ingredient_list", datasource.getAllIngredients()); //Optional parameters
+                startActivity(myIntent);
+            }
+        });
+
+        viewAllRecipes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(StartupActivity.this, RecipeListing.class);
+                myIntent.putExtra("recipe_list", datasource.getAllRecipes()); //Optional parameters
                 startActivity(myIntent);
             }
         });
@@ -98,5 +105,4 @@ public class TestDatabaseActivity extends ListActivity {
         datasource.close();
         super.onPause();
     }
-
-} 
+}

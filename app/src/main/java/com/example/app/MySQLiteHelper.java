@@ -4,12 +4,9 @@ package com.example.app;
  * Created by ehaydenr on 3/17/14.
  */
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-
-import java.util.ArrayList;
 
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
@@ -59,25 +56,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase database) {
         database.execSQL(CREATE_INGREDIENTS);
         database.execSQL(CREATE_RECIPES);
-
-        //final ArrayList<String> dirArray = new ArrayList<String>();
-        Cursor c = database.rawQuery("SELECT name FROM sqlite_master WHERE type='table'", null);
-        while(c.moveToNext()) {
-            String s=c.getString(0);
-            if(s.equals("android_metadata"))
-            {
-                //System.out.println("Get Metadata");
-                continue;
-            }
-            else
-            {
-                //dirArray.add(s);
-                Log.d(null, "Table name: " + s);
-            }
-        }
-
         dataSource.justCreated();
-        Log.d(null, "Create executed");
     }
 
     @Override

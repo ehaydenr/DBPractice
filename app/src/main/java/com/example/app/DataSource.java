@@ -79,8 +79,8 @@ public class DataSource {
         return null;
     }
 
-    public List<Ingredient> getAllIngredients(){
-        List<Ingredient> ingredients = new ArrayList<Ingredient>();
+    public ArrayList<Ingredient> getAllIngredients(){
+        ArrayList<Ingredient> ingredients = new ArrayList<Ingredient>();
 
         Cursor cursor = database.query(MySQLiteHelper.TABLE_INGREDIENTS, allIngredientColumns, null, null, null, null, null);
 
@@ -138,8 +138,8 @@ public class DataSource {
         return null;
     }
 
-    public List<Recipe> getAllRecipes(){
-        List<Recipe> recipes = new ArrayList<Recipe>();
+    public ArrayList<Recipe> getAllRecipes(){
+        ArrayList<Recipe> recipes = new ArrayList<Recipe>();
 
         Cursor cursor = database.query(MySQLiteHelper.TABLE_RECIPES, allRecipeColumns, null, null, null, null, null);
 
