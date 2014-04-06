@@ -48,4 +48,11 @@
         android:text="View Recipes"
         android:id="@+id/viewAllRecipesButton" />
 
+    <TextView
+        android:text="@string/error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/errorText"/>
+
 </LinearLayout>
