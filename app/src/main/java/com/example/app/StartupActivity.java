@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -26,6 +27,8 @@ public class StartupActivity extends Activity {
 
     private DataSource datasource;
     private Button viewAllIngredients, viewAllRecipes;
+    private Button search;
+    private EditText searchInput;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,6 +62,22 @@ public class StartupActivity extends Activity {
                 Intent myIntent = new Intent(StartupActivity.this, RecipeListing.class);
                 myIntent.putExtra("recipe_list", datasource.getAllRecipes()); //Optional parameters
                 startActivity(myIntent);
+            }
+        });
+
+        search = (Button) findViewById(R.id.button_search);
+        searchInput = (EditText) findViewById(R.id.edit_message);
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d(null, "Search Input: " + searchInput.getText());
+
+                // TODO: Generate query based on search input
+
+                // TODO: Run Query
+
+                // TODO: populate Recipe List view
             }
         });
 
