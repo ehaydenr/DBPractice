@@ -21,14 +21,14 @@ import java.util.List;
 
 public class RecipeListing extends ListActivity {
 
-    private List<Recipe> recipe_list;
+    private ArrayList<Recipe> recipe_list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listing);
 
-        this.recipe_list = (List<Recipe>)getIntent().getSerializableExtra("recipe_list");
+        this.recipe_list = (ArrayList<Recipe>)getIntent().getSerializableExtra("recipe_list");
         populateList();
 
         ListView view = this.getListView();
@@ -44,7 +44,8 @@ public class RecipeListing extends ListActivity {
     }
 
     private void populateList() {
-        ArrayAdapter<Recipe> adapter = new ArrayAdapter<Recipe>(this, android.R.layout.simple_list_item_1, recipe_list);
+        //ArrayAdapter<Recipe> adapter = new ArrayAdapter<Recipe>(this, android.R.layout.simple_list_item_1, recipe_list);
+        RecipeAdapter adapter = new RecipeAdapter(this, recipe_list);
         setListAdapter(adapter);
         adapter.notifyDataSetChanged();
     }
