@@ -31,7 +31,7 @@ public class RecipeListing extends ListActivity {
         this.recipe_list = (ArrayList<Recipe>)getIntent().getSerializableExtra("recipe_list");
         populateList();
 
-        ListView view = this.getListView();
+        ListView view = (ListView)findViewById(R.id.list);
         view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView parentView, View childView,
                                     int position, long id) {
