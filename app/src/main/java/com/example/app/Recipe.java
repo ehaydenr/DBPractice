@@ -15,9 +15,29 @@ import java.io.Serializable;
  `Rating` int(11) NOT NULL,
  * Created by ehaydenr on 3/17/14.
  */
-public class Recipe implements Serializable{
-    private long id, TimeActual, Calories, Rating;
+public class Recipe implements Serializable, Comparable<Recipe>{
+    private long id;
+    private long TimeActual;
+
+    private long Calories;
+    private long Rating;
     private String Name, MealType, Ingredients, IngredientsWithNumVal, TimeDisplay, InstructionsText;
+    private int score;
+
+    @Override
+    public int compareTo(Recipe recipe) {
+        if (this.score > recipe.score) return 1;
+        if (this.score < recipe.score) return -1;
+        else return 0;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
 
     public long getId() {
         return id;

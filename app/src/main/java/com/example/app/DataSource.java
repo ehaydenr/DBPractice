@@ -4,6 +4,7 @@ package com.example.app;
  * Created by ehaydenr on 3/17/14.
  */
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import android.content.ContentValues;
@@ -140,7 +141,7 @@ public class DataSource {
 
     public ArrayList<Recipe> searchRecipes(String keyword){
         ArrayList<Recipe> recipes = new ArrayList<Recipe>();
-        String queryString = "SELECT * FROM " + MySQLiteHelper.TABLE_RECIPES + (keyword.length() == 0 ? "" : " WHERE " + MySQLiteHelper.COLUMN_NAME + " LIKE '%" + keyword + "%'");
+        String queryString = "SELECT * FROM " + MySQLiteHelper.TABLE_RECIPES + (keyword.length() == 0 ? "" : " WHERE " + MySQLiteHelper.COLUMN_NAME + " LIKE '%" + keyword + "%'" + " OR " + MySQLiteHelper.COLUMN_INGREDIENTS + " LIKE '%" + keyword + "%'");
         Cursor cursor = database.rawQuery(queryString, null);
         cursor.moveToFirst();
         while(!cursor.isAfterLast()){
@@ -153,20 +154,50 @@ public class DataSource {
         return recipes;
     }
 
+    public ArrayList<Recipe> searchRecipesIngredients(Ingredient[] keyword) {
+        ArrayList<Recipe> recipes = new ArrayList<Recipe>();
+        String queryText = "";
+        for (int i = 0; i < keyword.length - 1; i++) {
+            queryText = queryText + "'%" + keyword[i].getName() + "%'" + " OR ";
+        }
+        queryText = queryText + "'%" + keyword[keyword.length - 1].getName() + "%'";
+
+        String queryString = "SELECT * FROM " + MySQLiteHelper.TABLE_RECIPES + (keyword.length == 0 ? "" : " WHERE " + MySQLiteHelper.COLUMN_INGREDIENTS + " LIKE " + queryText);
+        Cursor cursor = database.rawQuery(queryString, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Recipe recipe = cursorToRecipe(cursor);
+            recipes.add(recipe);
+            cursor.moveToNext();
+        }
+
+        cursor.close();
+        sortBasedOnScore(keyword, recipes);
+        return recipes;
+    }
+
+    public int score(Ingredient[] keyword, Recipe r) {
+        int score = 0;
+        String s = r.getIngredients();
+        String[] split = s.split(",");
+
+        for (int i = 0; i < keyword.length; i++) {
+            for (int j = 0; i < split.length; i++) {
+                if (keyword[i].getName().equals(split[j])) score++;
+            }
+        }
+        return score;
+    }
+
+    public void sortBasedOnScore(Ingredient[] keyword, ArrayList<Recipe> recipes) {
+        for (int i = 0; i < recipes.size(); i++) {
+            recipes.get(i).setScore(score(keyword, recipes.get(i)));
+        }
+        Collections.sort(recipes);
+
+    }
+
     public ArrayList<Recipe> getAllRecipes(){
-//        ArrayList<Recipe> recipes = new ArrayList<Recipe>();
-//
-//        Cursor cursor = database.query(MySQLiteHelper.TABLE_RECIPES, allRecipeColumns, null, null, null, null, null);
-//
-//        cursor.moveToFirst();
-//        while(!cursor.isAfterLast()){
-//            Recipe recipe = cursorToRecipe(cursor);
-//            recipes.add(recipe);
-//            cursor.moveToNext();
-//        }
-//
-//        cursor.close();
-//        return recipes;
         return this.searchRecipes("");
     }
 

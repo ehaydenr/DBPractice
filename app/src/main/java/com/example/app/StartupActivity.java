@@ -26,7 +26,7 @@ import java.util.List;
  */
 public class StartupActivity extends Activity {
 
-    private DataSource datasource;
+    static DataSource datasource;
     private Button viewAllIngredients, viewAllRecipes;
     private Button search;
     private EditText searchInput;

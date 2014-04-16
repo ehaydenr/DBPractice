@@ -49,6 +49,9 @@ public class IngredientListing extends Activity {
             public void onClick(View view) {
                 // Get Clicked Cells
                 Log.d(null, "Checked Ingredients: " + adapter.getCheckedIngredients());
+                Intent myIntent = new Intent(IngredientListing.this, SearchWithSelectedIngredients.class);
+                myIntent.putExtra("ingredient_list", adapter.getCheckedIngredients()); //Optional parameters
+                startActivity(myIntent);
             }
         });
     }

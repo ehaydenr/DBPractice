@@ -28,6 +28,10 @@
             android:name=".IngredientListing"
             android:label="Ingredient_Listing">
         </activity>
+        <activity
+            android:name=".SearchWithSelectedIngredients"
+            android:label="SearchWithSelectedIngredients">
+        </activity>
 
     </application>
 
