@@ -23,14 +23,13 @@ public class IngredientListing extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.listing);
+        setContentView(R.layout.ingredient_listing);
 
         this.ingredient_list = (ArrayList<Ingredient>)getIntent().getSerializableExtra("ingredient_list");
         Log.d(null, "Received Ingredient List: " + ingredient_list.toString());
         populateList();
 
-        /**
-         * ToDo
+
          ListView view = this.getListView();
          view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
          public void onItemClick(AdapterView parentView, View childView,
@@ -41,7 +40,7 @@ public class IngredientListing extends ListActivity {
 
          }
          });
-         */
+
     }
 
     private void populateList(){

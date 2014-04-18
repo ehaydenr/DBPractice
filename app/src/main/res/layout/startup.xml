@@ -8,7 +8,7 @@
 
     <TextView
         android:text="@string/Find_recipes"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
 
     <LinearLayout
@@ -30,23 +30,25 @@
             android:text="@string/button_search"
             android:drawableLeft="@drawable/abc_ic_search"
             android:ellipsize="middle"
-            android:editable="false"/>
+            android:editable="false" />
 
     </LinearLayout>
 
 
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="View Ingredients"
-        android:id="@+id/viewAllIngredientsButton" />
+        android:text="View All Ingredients"
+        android:id="@+id/viewAllIngredientsButton"
+        android:textColor="#ff1525ff" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="View Recipes"
-        android:id="@+id/viewAllRecipesButton" />
+        android:text="View All Recipes"
+        android:id="@+id/viewAllRecipesButton"
+        android:textColor="#ff1525ff" />
 
     <TextView
         android:text="@string/error_message"
