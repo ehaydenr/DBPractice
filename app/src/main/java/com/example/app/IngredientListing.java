@@ -24,6 +24,7 @@ public class IngredientListing extends Activity {
     private Button findRecipes;
     private ListView listView;
     private IngredientAdapter adapter;
+    private DataSource datasource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,9 @@ public class IngredientListing extends Activity {
         this.ingredient_list = (ArrayList<Ingredient>)getIntent().getSerializableExtra("ingredient_list");
         Log.d(null, "Received Ingredient List: " + ingredient_list.toString());
         listView = (ListView)findViewById(R.id.listView);
+
+        datasource = Main.datasource;
+
         populateList();
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -48,9 +52,17 @@ public class IngredientListing extends Activity {
             @Override
             public void onClick(View view) {
                 // Get Clicked Cells
-                Log.d(null, "Checked Ingredients: " + adapter.getCheckedIngredients());
-                Intent myIntent = new Intent(IngredientListing.this, SearchWithSelectedIngredients.class);
-                myIntent.putExtra("ingredient_list", adapter.getCheckedIngredients()); //Optional parameters
+                ArrayList<Ingredient> ingredients = adapter.getCheckedIngredients();
+                Log.d(null, "Checked Ingredients: " + ingredients);
+
+                // Search for Recipes
+                ArrayList<Recipe> recipes;
+                Ingredient[] arr = new Ingredient[ingredients.size()];
+                for(int i = 0; i<ingredients.size(); i++) arr[i] = ingredients.get(i);
+                recipes = datasource.searchRecipesIngredients(arr);
+
+                Intent myIntent = new Intent(IngredientListing.this, RecipeListing.class);
+                myIntent.putExtra("recipe_list", recipes); //Optional parameters
                 startActivity(myIntent);
             }
         });
@@ -61,4 +73,18 @@ public class IngredientListing extends Activity {
         listView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }
+
+    @Override
+    protected void onResume() {
+        datasource.open();
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        datasource.close();
+        super.onPause();
+    }
+
+
 }

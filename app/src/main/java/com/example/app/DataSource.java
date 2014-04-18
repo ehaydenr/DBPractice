@@ -181,8 +181,8 @@ public class DataSource {
         String s = r.getIngredients();
         String[] split = s.split(",");
 
-        for (int i = 0; i < keyword.length; i++) {
-            for (int j = 0; i < split.length; i++) {
+        for (int i = 0; i < keyword.length - 1; i++) {
+            for (int j = 0; j < split.length - 1; j++) {
                 if (keyword[i].getName().equals(split[j])) score++;
             }
         }
@@ -190,7 +190,7 @@ public class DataSource {
     }
 
     public void sortBasedOnScore(Ingredient[] keyword, ArrayList<Recipe> recipes) {
-        for (int i = 0; i < recipes.size(); i++) {
+        for (int i = 0; i < recipes.size() - 1 ; i++) {
             recipes.get(i).setScore(score(keyword, recipes.get(i)));
         }
         Collections.sort(recipes);
