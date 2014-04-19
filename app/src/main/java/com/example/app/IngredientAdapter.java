@@ -42,11 +42,9 @@ public class IngredientAdapter extends ArrayAdapter<Ingredient> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        // 1. Create inflater
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        // 2. Get rowView from inflater
         View rowView = inflater.inflate(R.layout.ingredient_row, parent, false);
 
         CheckBox check = (CheckBox) rowView.findViewById(R.id.checkBox);
@@ -54,7 +52,6 @@ public class IngredientAdapter extends ArrayAdapter<Ingredient> {
 
         check.setText(itemsArrayList.get(position).getName());
 
-        // 5. return rowView
         return rowView;
     }
 }
