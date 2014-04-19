@@ -29,7 +29,7 @@ public class IngredientListing extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ingredient_listing);
+        setContentView(R.layout.ingredient_picker);
 
         this.ingredient_list = (ArrayList<Ingredient>)getIntent().getSerializableExtra("ingredient_list");
         Log.d(null, "Received Ingredient List: " + ingredient_list.toString());
