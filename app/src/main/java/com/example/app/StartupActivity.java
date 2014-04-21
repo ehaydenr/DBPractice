@@ -26,25 +26,17 @@ import java.util.List;
  */
 public class StartupActivity extends Activity {
 
-    private DataSource datasource;
     private Button viewAllIngredients, viewAllRecipes;
     private Button search;
     private EditText searchInput;
     private TextView errorText;
+    private DataSource datasource;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.startup);
-
-        // Extract JSON from file and import into array
-        Gson g = new Gson();
-        Type type = new TypeToken<ArrayList<ArrayList<String>>>(){}.getType();
-        ArrayList<ArrayList<String>> ingredientsList = g.fromJson(readFromFile(R.raw.ingredients), type);
-        ArrayList<ArrayList<String>> recipeList = g.fromJson(readFromFile(R.raw.recipes), type);
-
-        datasource = new DataSource(this, ingredientsList, recipeList);
-        datasource.open();
+        this.datasource = Main.datasource;
 
         viewAllIngredients = (Button) findViewById(R.id.viewAllIngredientsButton);
         viewAllRecipes = (Button) findViewById(R.id.viewAllRecipesButton);
@@ -87,36 +79,6 @@ public class StartupActivity extends Activity {
             }
         });
 
-    }
-
-    private String readFromFile(int resource) {
-
-        String ret = "";
-
-        try {
-            InputStream inputStream = this.getResources().openRawResource(resource);
-
-            if ( inputStream != null ) {
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                String receiveString = "";
-                StringBuilder stringBuilder = new StringBuilder();
-
-                while ( (receiveString = bufferedReader.readLine()) != null ) {
-                    stringBuilder.append(receiveString);
-                }
-
-                inputStream.close();
-                ret = stringBuilder.toString();
-            }
-        }
-        catch (FileNotFoundException e) {
-            Log.e("login activity", "File not found: " + e.toString());
-        } catch (IOException e) {
-            Log.e("login activity", "Can not read file: " + e.toString());
-        }
-
-        return ret;
     }
 
     @Override

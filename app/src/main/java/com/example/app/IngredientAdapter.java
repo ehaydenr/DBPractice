@@ -14,6 +14,7 @@ public class IngredientAdapter extends ArrayAdapter<Ingredient> {
 
     private final Context context;
     private final ArrayList<Ingredient> itemsArrayList;
+    private final ArrayList<Boolean> checked;
 
     public IngredientAdapter(Context context, ArrayList<Ingredient> itemsArrayList) {
 
@@ -21,6 +22,21 @@ public class IngredientAdapter extends ArrayAdapter<Ingredient> {
 
         this.context = context;
         this.itemsArrayList = itemsArrayList;
+        this.checked = new ArrayList<Boolean>();
+        for(int i = 0; i<itemsArrayList.size(); i++)
+            checked.add(false);
+    }
+
+    public void toggleCheckBox(int position){
+        checked.set(position, !checked.get(position));
+    }
+
+    public ArrayList<Ingredient> getCheckedIngredients(){
+        ArrayList<Ingredient> checkedIngredients = new ArrayList<Ingredient>();
+        for(int i = 0; i<checked.size(); i++)
+            if(checked.get(i))
+                checkedIngredients.add(itemsArrayList.get(i));
+        return checkedIngredients;
     }
 
     @Override
@@ -32,6 +48,7 @@ public class IngredientAdapter extends ArrayAdapter<Ingredient> {
         View rowView = inflater.inflate(R.layout.ingredient_row, parent, false);
 
         CheckBox check = (CheckBox) rowView.findViewById(R.id.checkBox);
+        check.setChecked(checked.get(position));
 
         check.setText(itemsArrayList.get(position).getName());
 

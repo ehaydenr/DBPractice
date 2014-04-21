@@ -4,18 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView android:id="@+id/txtHeader"
+    <Button
         android:layout_width="fill_parent"
-        android:layout_height="55dp"
-        android:gravity="center_vertical"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:textStyle="bold"
-        android:textSize="22dp"
-        android:textColor="#FFFFFF"
-        android:padding="10dp"
-        android:text="Recipes"
-        android:background="#336699" />
+        android:layout_height="wrap_content"
+        android:text="Find Recipes!"
+        android:id="@+id/findRecipes"/>
 
     <ListView
         android:id="@+id/listView"
@@ -24,3 +17,5 @@
         android:text="Hello" />
 
 </LinearLayout>
+
+
