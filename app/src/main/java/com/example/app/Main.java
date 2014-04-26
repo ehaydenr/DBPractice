@@ -1,6 +1,7 @@
 package com.example.app;
 
 import android.app.Application;
+import android.graphics.Typeface;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 public class Main extends Application {
 
     public static DataSource datasource;
+    public static Typeface typeface;
 
     @Override
     public void onCreate() {
@@ -32,6 +34,8 @@ public class Main extends Application {
         Type type = new TypeToken<ArrayList<ArrayList<String>>>(){}.getType();
         ArrayList<ArrayList<String>> ingredientsList = g.fromJson(readFromFile(R.raw.ingredients), type);
         ArrayList<ArrayList<String>> recipeList = g.fromJson(readFromFile(R.raw.recipes), type);
+
+        typeface = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 
         datasource = new DataSource(this, ingredientsList, recipeList);
         datasource.open();

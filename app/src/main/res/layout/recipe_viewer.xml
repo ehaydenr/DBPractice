@@ -6,6 +6,20 @@
     android:background="@drawable/tweed_repeating"
     >
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name of recipe"
+        android:id="@+id/nameText"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        android:background="@drawable/blue_header"/>
+
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
@@ -14,20 +28,6 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Name of recipe"
-                android:id="@+id/nameText"
-                android:gravity="center_vertical"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentBottom="true"
-                android:textStyle="bold"
-                android:textSize="30sp"
-                android:textColor="#ffffff"
-                android:background="@drawable/blue_button"/>
 
             <TextView
                 android:layout_width="wrap_content"

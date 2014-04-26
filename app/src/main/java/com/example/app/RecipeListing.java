@@ -16,6 +16,7 @@ import android.os.Build;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,7 @@ public class RecipeListing extends Activity {
 
     private ArrayList<Recipe> recipe_list;
     private ListView listView;
+    private TextView textHeader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,9 @@ public class RecipeListing extends Activity {
         this.recipe_list = (ArrayList<Recipe>)getIntent().getSerializableExtra("recipe_list");
         listView = (ListView)findViewById(R.id.listView);
         populateList();
+
+        textHeader = (TextView)findViewById(R.id.txtHeader);
+        textHeader.setTypeface(Main.typeface);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView parentView, View childView,

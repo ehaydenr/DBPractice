@@ -49,7 +49,7 @@ public class IngredientListing extends Activity {
         });
 
         findRecipes = (Button)findViewById(R.id.findRecipes);
-        findRecipes.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf"));
+        findRecipes.setTypeface(Main.typeface);
         findRecipes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

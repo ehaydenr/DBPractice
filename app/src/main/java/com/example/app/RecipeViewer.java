@@ -36,6 +36,8 @@ public class RecipeViewer extends ActionBarActivity {
         this.caloriesText = (TextView)findViewById(R.id.caloriesText);
         this.ratingText = (TextView)findViewById(R.id.ratingText);
 
+        ((TextView) findViewById(R.id.nameText)).setTypeface(Main.typeface);
+
         // id null??
         if(this.id == null)
             Log.d(null, "ID NULL");
