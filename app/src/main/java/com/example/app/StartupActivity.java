@@ -39,11 +39,12 @@ public class StartupActivity extends Activity {
         setContentView(R.layout.startup);
         this.datasource = Main.datasource;
 
-        Typeface typeFace= Typeface.createFromAsset(getAssets(), "fonts/Roboto-Thin.ttf");
+        Typeface typeFace= Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 
         viewAllIngredients = (Button) findViewById(R.id.viewAllIngredientsButton);
         viewAllIngredients.setTypeface(typeFace);
         viewAllRecipes = (Button) findViewById(R.id.viewAllRecipesButton);
+        viewAllRecipes.setTypeface(typeFace);
 
         viewAllIngredients.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,9 +64,10 @@ public class StartupActivity extends Activity {
             }
         });
 
-
+        ((TextView) findViewById(R.id.heading_text)).setTypeface(typeFace);
 
         search = (Button) findViewById(R.id.button_search);
+        search.setTypeface(typeFace);
         searchInput = (EditText) findViewById(R.id.edit_message);
         errorText = (TextView) findViewById(R.id.errorText);
 

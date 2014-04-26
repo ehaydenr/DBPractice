@@ -3,13 +3,16 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/food_repeating">
 
     <TextView
         android:text="@string/Find_recipes"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/heading_text"
+        style="@style/button_text"/>
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -22,7 +25,9 @@
             android:id="@+id/edit_message"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="@string/edit_search"/>
+            android:hint="@string/edit_search"
+            android:textColor="#FFFFFF"
+            />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,32 +35,26 @@
             android:text="@string/button_search"
             android:drawableLeft="@drawable/abc_ic_search"
             android:ellipsize="middle"
-            android:editable="false" />
+            android:editable="false"
+            style="@style/button_text"/>
 
     </LinearLayout>
 
-
-    @drawable/red_button
-
     <Button
-        android:background="@drawable/red_button"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:background="@drawable/blue_button"
         android:text="View All Ingredients"
         android:id="@+id/viewAllIngredientsButton"
-        android:fontFamily="sans-serif"
         style="@style/button_text"/>
 
     <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:background="@drawable/blue_button"
         android:text="View All Recipes"
         android:id="@+id/viewAllRecipesButton"
-        android:textColor="#ff1525ff" />
+        style="@style/button_text"/>
 
     <TextView
         android:text="@string/error_message"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:visibility="invisible"
         android:id="@+id/errorText"/>
