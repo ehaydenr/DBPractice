@@ -1,6 +1,7 @@
 package com.example.app;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,7 +54,7 @@ public class IngredientAdapter extends ArrayAdapter<Ingredient> {
 
         check.setText(itemsArrayList.get(position).getName());
         Typeface typeFace= Typeface.createFromAsset(context.getAssets(), "fonts/Roboto-Light.ttf");
-        check.setTextColor(0xFFFFFF);
+        //check.setTextColor(Color.WHITE);
         check.setTypeface(typeFace);
 
         return rowView;
