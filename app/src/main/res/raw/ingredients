@@ -1,115 +1,19 @@
 [
     [
-        "cornstarch",
-        "Wet Ingredients"
-    ],
-    [
-        "water",
+        "alfredo sauce",
         "Other"
     ],
     [
-        "garlic powder",
-        "Spices"
-    ],
-    [
-        "ground round steak",
-        "Meat"
-    ],
-    [
-        "vegetable oil",
-        "Wet Ingredients"
-    ],
-    [
-        "broccoli flourets",
-        "Vegetables"
-    ],
-    [
-        "onion",
-        "Vegetables"
-    ],
-    [
-        "reduced sodium soy sauce",
-        "Wet Ingredients"
-    ],
-    [
-        "brown sugar",
-        "Dry Ingredients"
-    ],
-    [
-        "ground ginger",
-        "Spices"
-    ],
-    [
-        "cooked rice",
-        "Grains"
-    ],
-    [
-        "chicken stove top stuffing mix",
-        "Other"
-    ],
-    [
-        "milk",
-        "Dairy"
-    ],
-    [
-        "ham",
-        "Meat"
-    ],
-    [
-        "eggs",
-        "Dairy"
-    ],
-    [
-        "cheddar cheese",
-        "Dairy"
-    ],
-    [
-        "salt",
-        "Dry Ingredients"
-    ],
-    [
-        "boneless chicken breasts",
-        "Meat"
-    ],
-    [
-        "unsweetened canned pineapple c",
+        "avocado ",
         "Fruits"
     ],
     [
-        "soy sauce",
-        "Wet Ingredients"
-    ],
-    [
-        "dry mustard",
-        "Spices"
-    ],
-    [
-        "fresh ground pepper",
+        "baby spinach",
         "Vegetables"
     ],
     [
-        "green pepper",
-        "Vegetables"
-    ],
-    [
-        "mushrooms",
-        "Vegetables"
-    ],
-    [
-        "cherry tomatoes",
-        "Vegetables"
-    ],
-    [
-        "roma tomatoes",
-        "Vegetables"
-    ],
-    [
-        "garlic cloves",
-        "Spices"
-    ],
-    [
-        "olive oil",
-        "Wet Ingredients"
+        "bacon",
+        "Meat"
     ],
     [
         "balsamic vinegar ",
@@ -120,99 +24,47 @@
         "Spices"
     ],
     [
-        "fresh cracker pepper",
-        "Spices"
+        "basil leaves",
+        "Other"
     ],
     [
-        "italian bread",
-        "Grains"
+        "bell peppers",
+        "Vegetables"
     ],
     [
-        "parmigiano-reggiano cheese",
-        "Dairy"
-    ],
-    [
-        "meatballs",
-        "Meat"
-    ],
-    [
-        "spaghetti sauce",
+        "biscuits",
         "Canned Ingredients"
     ],
     [
-        "cream cheese",
-        "Dairy"
-    ],
-    [
-        "mayonnaise ",
-        "Other"
+        "Black Beans",
+        "Canned Ingredients"
     ],
     [
         "black pepper",
         "Spices"
     ],
     [
-        "italian seasoning",
-        "Spices"
-    ],
-    [
-        "mozzarella cheese",
+        "blue cheese",
         "Dairy"
     ],
     [
-        "ground beef",
+        "boneless chicken breasts",
         "Meat"
     ],
     [
-        "egg",
-        "Dairy"
+        "bread crumbs",
+        "Grains"
     ],
     [
         "breadcrumbs",
         "Dry Ingredients"
     ],
     [
-        "minced onion",
-        "Spices"
-    ],
-    [
-        "jellied cranberry sauce",
-        "Canned Ingredients"
-    ],
-    [
-        "chili sauce",
-        "Other"
-    ],
-    [
-        "lemon juice",
-        "Wet Ingredients"
-    ],
-    [
-        "kale",
+        "broccoli flourets",
         "Vegetables"
     ],
     [
-        "seasoned salt",
-        "Spices"
-    ],
-    [
-        "white bread",
-        "Grains"
-    ],
-    [
-        "strawberries",
-        "Fruits"
-    ],
-    [
-        "half and half",
-        "Dairy"
-    ],
-    [
-        "maple syrup",
-        "Other"
-    ],
-    [
-        "white sugar",
+        "brown sugar",
         "Dry Ingredients"
     ],
     [
@@ -220,103 +72,147 @@
         "Dairy"
     ],
     [
-        "biscuits",
-        "Canned Ingredients"
+        "cabbage",
+        "Vegetables"
     ],
     [
-        "pizza sauce",
-        "Canned Ingredients"
+        "ceviche",
+        "Meat"
+    ],
+    [
+        "cheddar",
+        "Dairy"
+    ],
+    [
+        "cheddar cheese",
+        "Dairy"
     ],
     [
         "cheese",
         "Dairy"
     ],
     [
-        "pizza toppings",
-        "Other"
-    ],
-    [
-        "ricotta cheese",
-        "Dairy"
-    ],
-    [
-        "baby spinach",
+        "cherry tomatoes",
         "Vegetables"
     ],
     [
-        "parmesan cheese",
-        "Dairy"
-    ],
-    [
-        "marinara sauce",
-        "Canned Ingredients"
-    ],
-    [
-        " lasagna noodles",
-        "Grains"
-    ],
-    [
-        "linguini",
-        "Grains"
-    ],
-    [
-        "tomatoes",
-        "Vegetables"
-    ],
-    [
-        "sweet onion",
-        "Vegetables"
+        "chicken breasts",
+        "Meat"
     ],
     [
         "chicken broth",
         ""
     ],
     [
-        "oregano",
+        "chicken stove top stuffing mix",
+        "Other"
+    ],
+    [
+        "chili sauce",
+        "Other"
+    ],
+    [
+        "chocolate chip cookies",
+        "Other"
+    ],
+    [
+        "cinnamon",
         "Spices"
     ],
     [
-        "red pepper flakes",
+        "cooked rice",
+        "Grains"
+    ],
+    [
+        "Cool Whip",
+        "Other"
+    ],
+    [
+        "corn tortillas",
+        "Grains"
+    ],
+    [
+        "cornstarch",
+        "Wet Ingredients"
+    ],
+    [
+        "cream cheese",
+        "Dairy"
+    ],
+    [
+        "dry mustard",
         "Spices"
+    ],
+    [
+        "egg",
+        "Dairy"
+    ],
+    [
+        "eggs",
+        "Dairy"
+    ],
+    [
+        "fettuccine",
+        "Grains"
+    ],
+    [
+        "flour",
+        "Dry Ingredients"
+    ],
+    [
+        "Frank's red hot",
+        "Other"
+    ],
+    [
+        "fresh cracker pepper",
+        "Spices"
+    ],
+    [
+        "fresh ground pepper",
+        "Vegetables"
     ],
     [
         "garlic",
         "Spices"
     ],
     [
-        "udon noodles",
-        "Dairy"
+        "garlic cloves",
+        "Spices"
     ],
     [
-        "snow peas",
-        "Vegetables"
-    ],
-    [
-        "natural peanut butter",
-        "Canned Ingredients"
-    ],
-    [
-        "rice vinegar",
-        "Wet Ingredients"
-    ],
-    [
-        "sesame oil",
-        "Wet Ingredients"
+        "garlic powder",
+        "Spices"
     ],
     [
         "ginger",
         "Spices"
     ],
     [
-        "peanuts",
-        "Other"
+        "grape tomatoes",
+        ""
     ],
     [
-        "potatoes",
+        "green pepper",
         "Vegetables"
     ],
     [
-        "bacon",
+        "ground beef",
+        "Meat"
+    ],
+    [
+        "ground ginger",
+        "Spices"
+    ],
+    [
+        "ground round steak",
+        "Meat"
+    ],
+    [
+        "half and half",
+        "Dairy"
+    ],
+    [
+        "ham",
         "Meat"
     ],
     [
@@ -328,35 +224,127 @@
         "Vegetables"
     ],
     [
-        "blue cheese",
-        "Dairy"
+        "italian bread",
+        "Grains"
     ],
     [
-        "vinaigrette dressing",
+        "italian seasoning",
+        "Spices"
+    ],
+    [
+        "jellied cranberry sauce",
+        "Canned Ingredients"
+    ],
+    [
+        "kale",
+        "Vegetables"
+    ],
+    [
+        "lasagna noodles",
+        "Grains"
+    ],
+    [
+        "lemon juice",
+        "Wet Ingredients"
+    ],
+    [
+        "linguini",
+        "Grains"
+    ],
+    [
+        "maple syrup",
         "Other"
     ],
     [
-        "chocolate chip cookies",
+        "marinara sauce",
+        "Canned Ingredients"
+    ],
+    [
+        "mayonnaise ",
         "Other"
     ],
     [
-        "prepared graham cracker crust",
-        "Other"
-    ],
-    [
-        "Cool Whip",
-        "Other"
-    ],
-    [
-        "chicken breasts",
+        "meatballs",
         "Meat"
     ],
     [
-        "flour",
-        "Dry Ingredients"
+        "milk",
+        "Dairy"
     ],
     [
-        "Frank's red hot",
+        "minced onion",
+        "Spices"
+    ],
+    [
+        "mozzarella",
+        "Dairy"
+    ],
+    [
+        "mozzarella cheese",
+        "Dairy"
+    ],
+    [
+        "mushrooms",
+        "Vegetables"
+    ],
+    [
+        "natural peanut butter",
+        "Canned Ingredients"
+    ],
+    [
+        "Nutella",
+        "Other"
+    ],
+    [
+        "olive oil",
+        "Wet Ingredients"
+    ],
+    [
+        "onion",
+        "Vegetables"
+    ],
+    [
+        "oregano",
+        "Spices"
+    ],
+    [
+        "Oreo Cookies",
+        "Other"
+    ],
+    [
+        "parmesan cheese",
+        "Dairy"
+    ],
+    [
+        "parmigiano-reggiano cheese",
+        "Dairy"
+    ],
+    [
+        "pasta sauce",
+        "Canned Ingredients"
+    ],
+    [
+        "peanuts",
+        "Other"
+    ],
+    [
+        "pepper",
+        "Spices"
+    ],
+    [
+        "pizza sauce",
+        "Canned Ingredients"
+    ],
+    [
+        "pizza toppings",
+        "Other"
+    ],
+    [
+        "potatoes",
+        "Vegetables"
+    ],
+    [
+        "prepared graham cracker crust",
         "Other"
     ],
     [
@@ -364,16 +352,32 @@
         "Vegetables"
     ],
     [
-        "corn tortillas",
-        "Grains"
+        "red pepper flakes",
+        "Spices"
     ],
     [
-        "avocado ",
-        "Fruits"
+        "reduced sodium soy sauce",
+        "Wet Ingredients"
     ],
     [
-        "cabbage",
+        "rice vinegar",
+        "Wet Ingredients"
+    ],
+    [
+        "ricotta cheese",
+        "Dairy"
+    ],
+    [
+        "roma tomatoes",
         "Vegetables"
+    ],
+    [
+        "Salsa con Queso",
+        "Canned Ingredients"
+    ],
+    [
+        "salt",
+        "Dry Ingredients"
     ],
     [
         "scallions",
@@ -384,103 +388,95 @@
         "Seafood"
     ],
     [
-        "pepper",
+        "seasoned salt",
         "Spices"
     ],
     [
-        "Oreo Cookies",
-        "Other"
+        "sesame oil",
+        "Wet Ingredients"
     ],
     [
-        "Nutella",
-        "Other"
-    ],
-    [
-        "vanilla extract",
-        "Spices"
-    ],
-    [
-        "whipped cream",
-        "Dairy"
-    ],
-    [
-        "toppings",
-        "Other"
-    ],
-    [
-        "fettuccine",
-        "Grains"
-    ],
-    [
-        "alfredo sauce",
-        "Other"
-    ],
-    [
-        "ceviche",
-        "Meat"
-    ],
-    [
-        "bell peppers",
+        "snow peas",
         "Vegetables"
     ],
     [
-        "pasta sauce",
+        "soy sauce",
+        "Wet Ingredients"
+    ],
+    [
+        "spaghetti sauce",
         "Canned Ingredients"
     ],
     [
-        "Uncle Ben's Ready Rice",
-        "Other"
+        "strawberries",
+        "Fruits"
     ],
     [
-        "Black Beans",
-        "Canned Ingredients"
-    ],
-    [
-        "bread crumbs",
-        "Grains"
-    ],
-    [
-        "tortilla chips",
-        "Grains"
-    ],
-    [
-        "Salsa con Queso",
-        "Canned Ingredients"
-    ],
-    [
-        "cinnamon",
-        "Spices"
-    ],
-    [
-        "whole wheat bread",
-        "Grains"
+        "sweet onion",
+        "Vegetables"
     ],
     [
         "syrup",
         "Other"
     ],
     [
-        "whole wheat pita",
-        "Grains"
+        "tomatoes",
+        "Vegetables"
     ],
     [
-        "cheddar",
-        "Dairy"
-    ],
-    [
-        "mozzarella",
-        "Dairy"
-    ],
-    [
-        "grape tomatoes",
-        ""
-    ],
-    [
-        "basil leaves",
+        "toppings",
         "Other"
     ],
     [
-        "",
+        "tortilla chips",
+        "Grains"
+    ],
+    [
+        "udon noodles",
+        "Dairy"
+    ],
+    [
+        "Uncle Ben's Ready Rice",
+        "Other"
+    ],
+    [
+        "unsweetened canned pineapple c",
         "Fruits"
+    ],
+    [
+        "vanilla extract",
+        "Spices"
+    ],
+    [
+        "vegetable oil",
+        "Wet Ingredients"
+    ],
+    [
+        "vinaigrette dressing",
+        "Other"
+    ],
+    [
+        "water",
+        "Other"
+    ],
+    [
+        "whipped cream",
+        "Dairy"
+    ],
+    [
+        "white bread",
+        "Grains"
+    ],
+    [
+        "white sugar",
+        "Dry Ingredients"
+    ],
+    [
+        "whole wheat bread",
+        "Grains"
+    ],
+    [
+        "whole wheat pita",
+        "Grains"
     ]
 ]

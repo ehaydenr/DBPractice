@@ -2,6 +2,7 @@ package com.example.app;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -38,7 +39,10 @@ public class StartupActivity extends Activity {
         setContentView(R.layout.startup);
         this.datasource = Main.datasource;
 
+        Typeface typeFace= Typeface.createFromAsset(getAssets(), "fonts/Roboto-Thin.ttf");
+
         viewAllIngredients = (Button) findViewById(R.id.viewAllIngredientsButton);
+        viewAllIngredients.setTypeface(typeFace);
         viewAllRecipes = (Button) findViewById(R.id.viewAllRecipesButton);
 
         viewAllIngredients.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +62,8 @@ public class StartupActivity extends Activity {
                 startActivity(myIntent);
             }
         });
+
+
 
         search = (Button) findViewById(R.id.button_search);
         searchInput = (EditText) findViewById(R.id.edit_message);
