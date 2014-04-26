@@ -1,6 +1,7 @@
 package com.example.app;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,8 +43,10 @@ public class RecipeAdapter extends ArrayAdapter<Recipe> {
 
         // 4. Set the text for textView
         nameView.setText(itemsArrayList.get(position).getName());
+        nameView.setTextColor(Color.WHITE);
         if(subTextView == null) Log.d(null, "sub Text View null");
         subTextView.setText("" + itemsArrayList.get(position).getMealType());
+        subTextView.setTextColor(Color.WHITE);
 
         // 5. return rowView
         return rowView;
