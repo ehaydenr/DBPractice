@@ -1,7 +1,6 @@
 package com.example.app;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,10 +8,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class RecipeViewer extends Activity {
@@ -104,29 +99,24 @@ public class RecipeViewer extends Activity {
         ingredientsView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
-        this.instructionsView.setText(recipe.getInstructionsText());
+        String instructionsTextFromRecipe = recipe.getInstructionsText();
+        String[] instructionsArray = instructionsTextFromRecipe.split("\n");
+        instructionsTextFromRecipe = "";
+        for(int i = 0; i< instructionsArray.length; i++)
+            instructionsTextFromRecipe += instructionsArray[i] + "\n\n";
+
+        this.instructionsView.setText(instructionsTextFromRecipe);
 
         // id null??
         if(this.id == null)
             Log.d(null, "ID NULL");
 
         if(recipe != null){
-
-
-//            this.id.setText("Recipe #" + recipe.getId());
             this.name.setText(recipe.getName());
             this.mealType.setText(recipe.getMealType());
             this.timeDisplay.setText(recipe.getTimeDisplay());
             this.caloriesText.setText(recipe.getCalories() + " calories");
             this.ratingText.setText(recipe.getRating() + "/5");
-
-//            this.mealType.setText("Meal Type: " + recipe.getMealType());
-//            this.ingredients.setText("Ingredients: " + recipe.getIngredients());
-//            this.ingredientsTextWithNumVal.setText("Ingredients With Num Val: " + recipe.getIngredientsWithNumVal());
-//            this.timeDisplay.setText("Preparation Time: " + recipe.getTimeDisplay());
-//            this.instructionsText.setText("Instructions Text: " + recipe.getInstructionsText());
-//            this.caloriesText.setText("Calories: "+recipe.getCalories());
-//            this.ratingText.setText("Rating"+recipe.getRating());
         }else{
             this.id.setText("Data not found.");
         }

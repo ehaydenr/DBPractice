@@ -137,6 +137,8 @@
                 android:id="@+id/instructionsView"
                 style="@style/button_text"
                 android:visibility="gone"
+                android:gravity="left"
+                android:textAlignment="gravity"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" />
 
