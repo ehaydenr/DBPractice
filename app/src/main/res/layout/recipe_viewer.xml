@@ -1,6 +1,10 @@
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/tweed_repeating"
+    >
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -12,74 +16,83 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/idText" />
+                android:text="Name of recipe"
+                android:id="@+id/nameText"
+                android:gravity="center_vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:textColor="#ffffff"
+                android:background="@drawable/blue_button"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/nameText" />
+                android:text="Recipe Number"
+                android:id="@+id/idText"
+                android:textColor="#ffffff"/>
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/mealTypeText" />
+                android:text="Meal Type"
+                android:id="@+id/mealTypeText"
+                android:textColor="#ffffff"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/ingredientsText" />
+                android:text="Ingredients"
+                android:id="@+id/ingredientsText"
+                android:textColor="#ffffff"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/ingredientsTextWithNumValText" />
+                android:text="Ingredients... Quantitative???"
+                android:id="@+id/ingredientsTextWithNumValText"
+                android:textColor="#ffffff"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/timeDisplayText" />
+                android:text="Time Display"
+                android:id="@+id/timeDisplayText"
+                android:textColor="#ffffff"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/timeActualText" />
+                android:text="Instructions"
+                android:id="@+id/instructionsTextText"
+                android:textColor="#ffffff"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/instructionsTextText" />
+                android:text="Calories"
+                android:id="@+id/caloriesText"
+                android:textColor="#ffffff"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/caloriesText" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/ratingText" />
+                android:text="Rating... haha"
+                android:id="@+id/ratingText"
+                android:textColor="#ffffff"/>
         </LinearLayout>
 
     </ScrollView>
