@@ -1,8 +1,6 @@
-
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:background="@drawable/tweed_repeating"
     >
 
@@ -20,82 +18,71 @@
         android:textColor="#ffffff"
         android:background="@drawable/blue_header"/>
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical">
-
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
             <TextView
+                android:id="@+id/ingredientHeader"
+                style="@style/button_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Recipe Number"
-                android:id="@+id/idText"
-                android:textColor="#ffffff"/>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Meal Type"
-                android:id="@+id/mealTypeText"
-                android:textColor="#ffffff"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Ingredients"
-                android:id="@+id/ingredientsText"
-                android:textColor="#ffffff"/>
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+            <Button
+                android:id="@+id/expandIngredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
 
+        <ListView
+            android:id="@+id/ingredientsView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Ingredients... Quantitative???"
-                android:id="@+id/ingredientsTextWithNumValText"
-                android:textColor="#ffffff"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Time Display"
-                android:id="@+id/timeDisplayText"
-                android:textColor="#ffffff"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/instructionsHeader"
+                style="@style/button_text"
                 android:text="Instructions"
-                android:id="@+id/instructionsTextText"
-                android:textColor="#ffffff"/>
-
-            <TextView
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+            <Button
+                android:id="@+id/expandInstructions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Calories"
-                android:id="@+id/caloriesText"
-                android:textColor="#ffffff"/>
+                android:text=">"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Rating... haha"
-                android:id="@+id/ratingText"
-                android:textColor="#ffffff"/>
-        </LinearLayout>
+                android:id="@+id/instructionsView"
+                style="@style/button_text"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
 
-    </ScrollView>
+        </ScrollView>
+
+    </LinearLayout>
 
 
 </LinearLayout>

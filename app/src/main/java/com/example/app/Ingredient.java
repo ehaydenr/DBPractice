@@ -8,6 +8,13 @@ public class Ingredient implements Serializable{
     private String type;
     private String category;
 
+    public Ingredient(){
+
+    }
+    public Ingredient(String name){
+        this.ingredient = name;
+    }
+
     public long getId() {
         return id;
     }
