@@ -100,6 +100,19 @@ public class DataSource {
         Ingredient ingredient = new Ingredient();
         ingredient.setId(cursor.getLong(0));
         ingredient.setName(cursor.getString(1));
+
+        // Format Name
+        String name = ingredient.getName();
+        String[] words = name.split(" ");
+        name = "";
+        for(int i = 0; i<words.length; i++){
+            String word = words[i];
+            char firstChar = Character.toUpperCase(word.charAt(0));
+            name += firstChar + word.substring(1);
+            if(i+1<words.length) name += " ";
+        }
+        ingredient.setName(name);
+
         ingredient.setCategory(cursor.getString(2));
         return ingredient;
     }
