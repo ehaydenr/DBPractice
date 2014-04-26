@@ -15,7 +15,7 @@
         android:textColor="#FFFFFF"
         android:padding="10dp"
         android:text="Recipes"
-        android:background="#336699" />
+        android:background="@drawable/blue_header"/>
 
     <ListView
         android:id="@+id/listView"

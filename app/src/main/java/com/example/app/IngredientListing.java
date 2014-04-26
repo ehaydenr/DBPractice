@@ -3,6 +3,7 @@ package com.example.app;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -48,11 +49,13 @@ public class IngredientListing extends Activity {
         });
 
         findRecipes = (Button)findViewById(R.id.findRecipes);
+        findRecipes.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf"));
         findRecipes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Get Clicked Cells
                 ArrayList<Ingredient> ingredients = adapter.getCheckedIngredients();
+                if(ingredients.size() < 1) return;
                 Log.d(null, "Checked Ingredients: " + ingredients);
 
                 // Search for Recipes
