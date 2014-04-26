@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">DBPractice</string>
+    <string name="app_name">Bon Appetite!</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_recipe">RecipeActivity</string>
     <string name="title_activity_recipe__listing">Recipe_Listing</string>

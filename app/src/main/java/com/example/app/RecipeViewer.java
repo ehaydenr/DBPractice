@@ -1,5 +1,6 @@
 package com.example.app;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,7 +15,7 @@ import org.w3c.dom.Text;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class RecipeViewer extends ActionBarActivity {
+public class RecipeViewer extends Activity {
 
     TextView id, name, mealType, ingredients, ingredientsTextWithNumVal, timeDisplay, timeActual, instructionsText, caloriesText, ratingText;
 
@@ -74,13 +75,13 @@ public class RecipeViewer extends ActionBarActivity {
     public void initTextFields(Recipe recipe){
 //        this.id = (TextView)findViewById(R.id.idText);
         this.name = (TextView)findViewById(R.id.nameText);
-//        this.mealType = (TextView)findViewById(R.id.mealTypeText);
+        this.mealType = (TextView)findViewById(R.id.mealTypeText);
 //        this.ingredients = (TextView)findViewById(R.id.ingredientsText);
 //        this.ingredientsTextWithNumVal = (TextView)findViewById(R.id.ingredientsTextWithNumValText);
-//        this.timeDisplay = (TextView)findViewById(R.id.timeDisplayText);
+        this.timeDisplay = (TextView)findViewById(R.id.timeDisplayText);
 //        this.instructionsText = (TextView)findViewById(R.id.instructionsTextText);
-//        this.caloriesText = (TextView)findViewById(R.id.caloriesText);
-//        this.ratingText = (TextView)findViewById(R.id.ratingText);
+        this.caloriesText = (TextView)findViewById(R.id.caloriesText);
+        this.ratingText = (TextView)findViewById(R.id.ratingText);
 
         ((TextView) findViewById(R.id.nameText)).setTypeface(Main.typeface);
 
@@ -114,6 +115,10 @@ public class RecipeViewer extends ActionBarActivity {
 
 //            this.id.setText("Recipe #" + recipe.getId());
             this.name.setText(recipe.getName());
+            this.mealType.setText(recipe.getMealType());
+            this.timeDisplay.setText(recipe.getTimeDisplay());
+            this.caloriesText.setText(recipe.getCalories() + " calories");
+            this.ratingText.setText(recipe.getRating() + "/5");
 
 //            this.mealType.setText("Meal Type: " + recipe.getMealType());
 //            this.ingredients.setText("Ingredients: " + recipe.getIngredients());
