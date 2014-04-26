@@ -54,7 +54,7 @@ public class IngredientAdapter extends ArrayAdapter<Ingredient> {
 
         check.setText(itemsArrayList.get(position).getName());
         Typeface typeFace= Typeface.createFromAsset(context.getAssets(), "fonts/Roboto-Light.ttf");
-        //check.setTextColor(Color.WHITE);
+        check.setTextColor(Color.WHITE);
         check.setTypeface(typeFace);
 
         return rowView;
