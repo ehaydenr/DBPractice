@@ -35,13 +35,16 @@
     </LinearLayout>
 
 
+    @drawable/red_button
 
     <Button
+        android:background="@drawable/red_button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="View All Ingredients"
         android:id="@+id/viewAllIngredientsButton"
-        android:textColor="#ff1525ff" />
+        android:fontFamily="sans-serif"
+        style="@style/button_text"/>
 
     <Button
         android:layout_width="fill_parent"
