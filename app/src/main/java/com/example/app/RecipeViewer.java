@@ -90,7 +90,7 @@ public class RecipeViewer extends Activity {
         this.instructionsHeader.setTypeface(Main.typeface);
         this.ingredientHeader.setTypeface(Main.typeface);
 
-        String[] ingredients = recipe.getIngredients().split(",");
+        String[] ingredients = recipe.getIngredientsWithNumVal().split(",");
         ArrayList<Ingredient> ingredient_list = new ArrayList<Ingredient>();
         for(int i = 0; i<ingredients.length; i++)
             ingredient_list.add(new Ingredient(ingredients[i]));
@@ -115,7 +115,8 @@ public class RecipeViewer extends Activity {
             this.name.setText(recipe.getName());
             this.mealType.setText(recipe.getMealType());
             this.timeDisplay.setText(recipe.getTimeDisplay());
-            this.caloriesText.setText(recipe.getCalories() + " calories");
+            if(recipe.getCalories() != 0)
+                this.caloriesText.setText(recipe.getCalories() + " calories");
             this.ratingText.setText(recipe.getRating() + "/5");
         }else{
             this.id.setText("Data not found.");

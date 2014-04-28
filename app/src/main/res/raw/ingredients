@@ -4,6 +4,10 @@
         "Other"
     ],
     [
+        "apple",
+        "Fruits"
+    ],
+    [
         "avocado ",
         "Fruits"
     ],
@@ -16,8 +20,24 @@
         "Meat"
     ],
     [
+        "baking powder",
+        "Dry Ingredients"
+    ],
+    [
+        "baking soda",
+        "Dry Ingredients"
+    ],
+    [
         "balsamic vinegar ",
         "Wet Ingredients"
+    ],
+    [
+        "banana",
+        "Fruits"
+    ],
+    [
+        "barbecue sauce",
+        "Other"
     ],
     [
         "basil",
@@ -26,6 +46,10 @@
     [
         "basil leaves",
         "Other"
+    ],
+    [
+        "bell pepper",
+        "Vegetables"
     ],
     [
         "bell peppers",
@@ -38,6 +62,10 @@
     [
         "Black Beans",
         "Canned Ingredients"
+    ],
+    [
+        "black olives",
+        "Other"
     ],
     [
         "black pepper",
@@ -60,6 +88,10 @@
         "Dry Ingredients"
     ],
     [
+        "broccoli ",
+        "Vegetables"
+    ],
+    [
         "broccoli flourets",
         "Vegetables"
     ],
@@ -68,12 +100,28 @@
         "Dry Ingredients"
     ],
     [
+        "buffalo wing sauce",
+        "Other"
+    ],
+    [
         "butter",
         "Dairy"
     ],
     [
         "cabbage",
         "Vegetables"
+    ],
+    [
+        "can of chicken",
+        "Canned Ingredients"
+    ],
+    [
+        "candy canes",
+        "Other"
+    ],
+    [
+        "cayenne pepper",
+        "Spices"
     ],
     [
         "ceviche",
@@ -96,6 +144,10 @@
         "Vegetables"
     ],
     [
+        "chicken breast",
+        "Meat"
+    ],
+    [
         "chicken breasts",
         "Meat"
     ],
@@ -108,15 +160,39 @@
         "Other"
     ],
     [
+        "chicken wing pieces",
+        "Meat"
+    ],
+    [
         "chili sauce",
         "Other"
+    ],
+    [
+        "chinese five spice powder",
+        "Spices"
     ],
     [
         "chocolate chip cookies",
         "Other"
     ],
     [
+        "chocolate chips",
+        "Other"
+    ],
+    [
+        "chopped red bell peppers",
+        "Vegetables"
+    ],
+    [
+        "cilantro leaves",
+        "Vegetables"
+    ],
+    [
         "cinnamon",
+        "Spices"
+    ],
+    [
+        "coarse salt",
         "Spices"
     ],
     [
@@ -152,6 +228,14 @@
         "Dairy"
     ],
     [
+        "elbow macaroni",
+        "Grains"
+    ],
+    [
+        "feta cheese crumbles",
+        "Dairy"
+    ],
+    [
         "fettuccine",
         "Grains"
     ],
@@ -160,11 +244,15 @@
         "Dry Ingredients"
     ],
     [
+        "flour tortillas",
+        "Grains"
+    ],
+    [
         "Frank's red hot",
         "Other"
     ],
     [
-        "fresh cracker pepper",
+        "fresh cracked pepper",
         "Spices"
     ],
     [
@@ -186,6 +274,14 @@
     [
         "ginger",
         "Spices"
+    ],
+    [
+        "graham crackers",
+        "Other"
+    ],
+    [
+        "granulated sugar",
+        "Dry Ingredients"
     ],
     [
         "grape tomatoes",
@@ -216,6 +312,10 @@
         "Meat"
     ],
     [
+        "heavy cream",
+        "Dairy"
+    ],
+    [
         "hot sauce",
         "Spices"
     ],
@@ -228,8 +328,16 @@
         "Grains"
     ],
     [
+        "italian dressing",
+        "Other"
+    ],
+    [
         "italian seasoning",
         "Spices"
+    ],
+    [
+        "jam",
+        "Other"
     ],
     [
         "jellied cranberry sauce",
@@ -244,8 +352,16 @@
         "Grains"
     ],
     [
+        "lemon",
+        "Vegetables"
+    ],
+    [
         "lemon juice",
         "Wet Ingredients"
+    ],
+    [
+        "light sour cream",
+        "Dairy"
     ],
     [
         "linguini",
@@ -276,6 +392,10 @@
         "Spices"
     ],
     [
+        "mini marshmallows ",
+        "Other"
+    ],
+    [
         "mozzarella",
         "Dairy"
     ],
@@ -300,7 +420,15 @@
         "Wet Ingredients"
     ],
     [
+        "olives",
+        "Other"
+    ],
+    [
         "onion",
+        "Vegetables"
+    ],
+    [
+        "orange",
         "Vegetables"
     ],
     [
@@ -324,12 +452,24 @@
         "Canned Ingredients"
     ],
     [
+        "pasta shells",
+        "Grains"
+    ],
+    [
+        "peanut butter",
+        "Other"
+    ],
+    [
         "peanuts",
         "Other"
     ],
     [
         "pepper",
         "Spices"
+    ],
+    [
+        "pepper jack cheese",
+        "Dairy"
     ],
     [
         "pizza sauce",
@@ -340,11 +480,23 @@
         "Other"
     ],
     [
+        "plain bagel",
+        "Grains"
+    ],
+    [
         "potatoes",
         "Vegetables"
     ],
     [
         "prepared graham cracker crust",
+        "Other"
+    ],
+    [
+        "quick oats",
+        "Other"
+    ],
+    [
+        "ranch dressing",
         "Other"
     ],
     [
@@ -358,6 +510,14 @@
     [
         "reduced sodium soy sauce",
         "Wet Ingredients"
+    ],
+    [
+        "refrigerated pizza dough",
+        "Other"
+    ],
+    [
+        "rice",
+        "Grains"
     ],
     [
         "rice vinegar",
@@ -380,6 +540,10 @@
         "Dry Ingredients"
     ],
     [
+        "salted peanuts",
+        "Other"
+    ],
+    [
         "scallions",
         "Vegetables"
     ],
@@ -392,8 +556,16 @@
         "Spices"
     ],
     [
+        "semi-sweet chocolate chips",
+        "Other"
+    ],
+    [
         "sesame oil",
         "Wet Ingredients"
+    ],
+    [
+        "smoked turkey",
+        "Meat"
     ],
     [
         "snow peas",
@@ -412,11 +584,35 @@
         "Fruits"
     ],
     [
+        "sugar",
+        "Dry Ingredients"
+    ],
+    [
+        "sugar snap peas",
+        "Vegetables"
+    ],
+    [
+        "superfine sugar",
+        "Dry Ingredients"
+    ],
+    [
         "sweet onion",
         "Vegetables"
     ],
     [
+        "sweetened condensed milk",
+        "Canned Ingredients"
+    ],
+    [
         "syrup",
+        "Other"
+    ],
+    [
+        "teriyaki sauce",
+        "Wet Ingredients"
+    ],
+    [
+        "toffee bits",
         "Other"
     ],
     [
@@ -440,8 +636,16 @@
         "Other"
     ],
     [
+        "unsalted butter",
+        "Dairy"
+    ],
+    [
         "unsweetened canned pineapple c",
         "Fruits"
+    ],
+    [
+        "unsweetened cocoa powder",
+        "Spices"
     ],
     [
         "vanilla extract",
@@ -458,6 +662,10 @@
     [
         "water",
         "Other"
+    ],
+    [
+        "wheat bread",
+        "Grains"
     ],
     [
         "whipped cream",
@@ -478,5 +686,9 @@
     [
         "whole wheat pita",
         "Grains"
+    ],
+    [
+        "yogurt",
+        "Dairy"
     ]
 ]

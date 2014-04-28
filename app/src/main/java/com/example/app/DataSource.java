@@ -107,8 +107,10 @@ public class DataSource {
         name = "";
         for(int i = 0; i<words.length; i++){
             String word = words[i];
+            if(word.length() == 0) continue;
             char firstChar = Character.toUpperCase(word.charAt(0));
-            name += firstChar + word.substring(1);
+            if(word.length() == 1) name += firstChar + "";
+            else name += firstChar + word.substring(1);
             if(i+1<words.length) name += " ";
         }
         ingredient.setName(name);
@@ -220,7 +222,23 @@ public class DataSource {
         recipe.setName(cursor.getString(1));
         recipe.setMealType(cursor.getString(2));
         recipe.setIngredients(cursor.getString(3));
-        recipe.setIngredientsWithNumVal(cursor.getString(4));
+
+        String ingredientsWithNumVal = cursor.getString(4);
+
+        String[] words = ingredientsWithNumVal.split(" ");
+
+        ingredientsWithNumVal = "";
+        for(int i = 0; i<words.length; i++){
+            String word = words[i];
+            if(word.length() == 0) continue;
+            char firstChar = Character.toUpperCase(word.charAt(0));
+            if(word.length() == 1) ingredientsWithNumVal += firstChar + "";
+            else ingredientsWithNumVal += firstChar + word.substring(1);
+            if(i+1<words.length) ingredientsWithNumVal += " ";
+        }
+
+        recipe.setIngredientsWithNumVal(ingredientsWithNumVal);
+
         recipe.setTimeDisplay(cursor.getString(5));
         recipe.setTimeActual(cursor.getLong(6));
         recipe.setInstructionsText(cursor.getString(7));
